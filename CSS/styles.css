@@ -25,3 +25,7 @@
   background-color: #273746;
   color: white;
 }
+
+label {
+    font-family: "Fira Sans", sans-serif;
+}
