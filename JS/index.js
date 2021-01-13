@@ -5,12 +5,44 @@
 //   .then((data) => {
 //     console.log(data);
 //   })
+const fillStat = (name) => {
+  console.log(name)
+  const stats = document.getElementsByName(name);
+  console.log(stats)
+  // First loop, find which option is actually selected. 
+  const selected = [...stats].filter(stat => stat.checked);
+ 
+  // Then we need to select every input before it. 
+  // Effing VS Code wants to append Actually to everytthing.
+  stats.forEach(stat => {
+    if (parseInt(stat.value) <= parseInt(selected[0].value)) {
+      stat.checked = true;
+      console.log(stat.checked)
+    }
+  })
+
+}
 
 window.onload = function () {
   let form = document.getElementById('sheet');
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    console.log(sheet.elements)
+    
+    const str = form.elements['strength'].value // Eh?  EEEh?  Pretty slick!
+    const cha = form.elements['charisma'].value
+    const per = form.elements['perception'].value
+    const dex = form.elements['dexterity'].value
+    const man =form.elements['manipulation'].value
+    const intel = form.elements['intelligence'].value
+    const sta = form.elements['stamina'].value
+    const appe = form.elements['appearance'].value
+    const wit = form.elements['wits'].value
   })
 };
+
+
+
+
+
+

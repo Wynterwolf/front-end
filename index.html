@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+/* <!DOCTYPE HTML>
 <html lang = "en">
 <head>
   <link rel="stylesheet" href="/CSS/styles.css">
@@ -22,16 +22,21 @@
 
 <div>
    <label for="cname">Character Name: </label>
-   <input type="text" id="cname" name="cname">
+   <input type="text" id="cname" name="cname" />
 </div>
 
 <div>
    <label for="concept">Concept: </label>
-   <input type="text" id="concept" name="concept">
+   <input type="text" id="concept" name="concept" />
 </div>
 
 <div>
 <label for="breed-choice">Choose an Breed:</label>
+<select id="breed-choice" name="breed-choice" >
+  <option value="Homid">Homid</option>
+  <option value="Lupus">Lupus</option>
+</select>
+<!--
 <input list="breed-flavors" id="breed-choice" name="breed-choice" />
 <datalist id="breed-flavors">
     <option value="Homid">
@@ -39,19 +44,25 @@
     <option value="">
     <option value="">
     <option value="">
-</datalist>
+</datalist> -->
 </div>
 
 <div>
 <label for="auspice-choice">Choose an Auspice:</label>
-<input list="auspice-flavors" id="auspice-choice" name="auspice-choice" />
+<select id="auspice-choice" name="auspice-choice">
+  <option value="Full">Full</option>
+    <option value="Half">Half</option>
+    <option value="No Moon">No Moon</option>
+</select>
+
+<!-- <input list="auspice-flavors" id="auspice-choice" name="auspice-choice" />
 <datalist id="auspice-flavors">
     <option value="Full">
     <option value="Half">
     <option value="No Moon">
     <option value="">
     <option value="">
-</datalist>
+</datalist> -->
 </div>
 
 <div>
@@ -70,11 +81,11 @@
   <div class="statWrapper">
     <p class="label">Strength</p>
     <div class="buttons">
-      <input type = "radio" name="strength" value ="1" >
-      <input type = "radio" name="strength" value ="2" >
-      <input type = "radio" name="strength" value ="3" >
-      <input type = "radio" name="strength" value ="4" >
-      <input type = "radio" name="strength" value ="5" >
+      <input type = "radio" name="strength" value ="1" onClick="fillStat('strength')" />
+      <input type = "radio" name="strength" value ="2" onClick="fillStat('strength')"/>
+      <input type = "radio" name="strength" value ="3" onClick="fillStat('strength')"/>
+      <input type = "radio" name="strength" value ="4" onClick="fillStat('strength')"/>
+      <input type = "radio" name="strength" value ="5" onClick="fillStat('strength')"/>
     </div>
   </div>
   <div class="statWrapper">
