@@ -11,7 +11,7 @@ const fillStat = (name) => {
   console.log(stats)
   // First loop, find which option is actually selected. 
   const selected = [...stats].filter(stat => stat.checked);
- 
+
   // Then we need to select every input before it. 
   // Effing VS Code wants to append Actually to everytthing.
   stats.forEach(stat => {
@@ -28,16 +28,49 @@ window.onload = function () {
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    
+
+    const cname = form.elements['name'].value
+    const concept = form.elements['concept'].value
+    const breed = breed.elements['breed'].value
+    const auspice = auspice.elements['auspice'].value
+    const tribe = tribe.elements['tribe'].value
+
     const str = form.elements['strength'].value // Eh?  EEEh?  Pretty slick!
     const cha = form.elements['charisma'].value
     const per = form.elements['perception'].value
     const dex = form.elements['dexterity'].value
-    const man =form.elements['manipulation'].value
+    const man = form.elements['manipulation'].value
     const intel = form.elements['intelligence'].value
     const sta = form.elements['stamina'].value
     const appe = form.elements['appearance'].value
-    const wit = form.elements['wits'].value
+    const wit = form.elements['wit'].value
+
+    fetch('http://localhost:3000/characters/ ', {
+      method: 'POST',
+      body: JSON.stringify({
+        name: cname,
+        concept: concept,
+        breed: breed,
+        auspice: auspice,
+        tribe: tribe,
+        strength: str,
+        dexterity: dex,
+        charisma: cha,
+        stamina: sta,
+        wits: wit,
+        appearance: appearance,
+        perception: per,
+        manipulation: man,
+        intelligence: intel
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8'
+      }
+    })
+      .then(response => response.json())
+      .then(json => {
+        console.log("This Works!");
+      });
   })
 };
 

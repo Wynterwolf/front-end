@@ -1,42 +1,40 @@
-/* <!DOCTYPE HTML>
-<html lang = "en">
-<head>
-  <link rel="stylesheet" href="/CSS/styles.css">
-  <!-- basic.html -->
-  <title>basic.html</title>
-  <meta charset = "UTF-8" />
-</head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <!-- basic.html -->
+    <title>basic.html</title>
+    <meta charset="UTF-8" />
+  </head>
 
-<body>
+  <body>
+    <script src="js/index.js"></script>
 
-  <script src="js/index.js"></script>
+    <div class="topnav">
+      <a class="active" href="#home">Werewolf</a>
+      <a href="#">Fera</a>
+      <a href="#">Fae</a>
+      <a href="#">Vampire</a>
+    </div>
 
-<div class="topnav">
-  <a class="active" href="#home">Werewolf</a>
-  <a href="#">Fera</a>
-  <a href="#">Fae</a>
-  <a href="#">Vampire</a>
-</div>
+    <form id="sheet" method="POST">
+      <div>
+        <label for="cname">Character Name: </label>
+        <input type="text" id="cname" name="cname" />
+      </div>
 
-<form id="sheet" method="POST">
+      <div>
+        <label for="concept">Concept: </label>
+        <input type="text" id="concept" name="concept" />
+      </div>
 
-<div>
-   <label for="cname">Character Name: </label>
-   <input type="text" id="cname" name="cname" />
-</div>
-
-<div>
-   <label for="concept">Concept: </label>
-   <input type="text" id="concept" name="concept" />
-</div>
-
-<div>
-<label for="breed-choice">Choose an Breed:</label>
-<select id="breed-choice" name="breed-choice" >
-  <option value="Homid">Homid</option>
-  <option value="Lupus">Lupus</option>
-</select>
-<!--
+      <div>
+        <label for="breed">Choose an Breed:</label>
+        <select id="breed" name="breed">
+          <option value="Homid">Homid</option>
+          <option value="Lupus">Lupus</option>
+        </select>
+        <!--
 <input list="breed-flavors" id="breed-choice" name="breed-choice" />
 <datalist id="breed-flavors">
     <option value="Homid">
@@ -45,17 +43,17 @@
     <option value="">
     <option value="">
 </datalist> -->
-</div>
+      </div>
 
-<div>
-<label for="auspice-choice">Choose an Auspice:</label>
-<select id="auspice-choice" name="auspice-choice">
-  <option value="Full">Full</option>
-    <option value="Half">Half</option>
-    <option value="No Moon">No Moon</option>
-</select>
+      <div>
+        <label for="auspice">Choose an Auspice:</label>
+        <select id="auspice" name="auspice">
+          <option value="Full">Full</option>
+          <option value="Half">Half</option>
+          <option value="No Moon">No Moon</option>
+        </select>
 
-<!-- <input list="auspice-flavors" id="auspice-choice" name="auspice-choice" />
+        <!-- <input list="auspice-flavors" id="auspice-choice" name="auspice-choice" />
 <datalist id="auspice-flavors">
     <option value="Full">
     <option value="Half">
@@ -63,116 +61,114 @@
     <option value="">
     <option value="">
 </datalist> -->
-</div>
+      </div>
 
-<div>
-<label for="tribe-choice">Choose an Tribe:</label>
-<input list="tribe-flavors" id="tribe-choice" name="tribe-choice" />
-<datalist id="tribe-flavors">
-    <option value="Tribe A">
-    <option value="Tribe B">
-    <option value="Tribe C">
-    <option value="Tribe D">
-    <option value="Tribe E">
-</datalist>
-</div>
+      <div>
+        <label for="tribe">Choose an Tribe:</label>
+        <select id="tribe" name="tribe" />
+        <datalist id="tribe">
+          <option value="Tribe A">Tribe A</option>
+          <option value="Tribe B">Tribe B</option>
+          <option value="Tribe C">Tribe C</option>
+          <option value="Tribe D">Tribe D</option>
+          <option value="Tribe E">Tribe E</option>
+        </datalist>
+      </div>
 
-<div class="wrapper">
-  <div class="statWrapper">
-    <p class="label">Strength</p>
-    <div class="buttons">
-      <input type = "radio" name="strength" value ="1" onClick="fillStat('strength')" />
-      <input type = "radio" name="strength" value ="2" onClick="fillStat('strength')"/>
-      <input type = "radio" name="strength" value ="3" onClick="fillStat('strength')"/>
-      <input type = "radio" name="strength" value ="4" onClick="fillStat('strength')"/>
-      <input type = "radio" name="strength" value ="5" onClick="fillStat('strength')"/>
-    </div>
-  </div>
-  <div class="statWrapper">
-    <p class="label">Dexterity</p>
-    <div class="buttons">
-      <input type = "radio" name="dexterity" value ="1" >
-      <input type = "radio" name="dexterity" value ="2" >
-      <input type = "radio" name="dexterity" value ="3" >
-      <input type = "radio" name="dexterity" value ="4" >
-      <input type = "radio" name="dexterity" value ="5" >
-    </div>
-  </div>
-    <div class="statWrapper">
-    <p class="label">Stamina</p>
-    <div class="buttons">
-      <input type = "radio" name="stamina" value ="1" >
-      <input type = "radio" name="stamina" value ="2" >
-      <input type = "radio" name="stamina" value ="3" >
-      <input type = "radio" name="stamina" value ="4" >
-      <input type = "radio" name="stamina" value ="5" >
-    </div>
-  </div>
-    <div class="statWrapper">
-    <p class="label">Charisma</p>
-    <div class="buttons">
-      <input type = "radio" name="charisma" value ="1" >
-      <input type = "radio" name="charisma" value ="2" >
-      <input type = "radio" name="charisma" value ="3" >
-      <input type = "radio" name="charisma" value ="4" >
-      <input type = "radio" name="charisma" value ="5" >
-    </div>
-  </div>
-      <div class="statWrapper">
-    <p class="label">Wits</p>
-    <div class="buttons">
-      <input type = "radio" name="wits" value ="1" >
-      <input type = "radio" name="wits" value ="2" >
-      <input type = "radio" name="wits" value ="3" >
-      <input type = "radio" name="wits" value ="4" >
-      <input type = "radio" name="wits" value ="5" >
-    </div>
-  </div>
+      <div class="wrapper">
         <div class="statWrapper">
-    <p class="label">Appearance</p>
-    <div class="buttons">
-      <input type = "radio" name="appearance" value ="1" >
-      <input type = "radio" name="appearance" value ="2" >
-      <input type = "radio" name="appearance" value ="3" >
-      <input type = "radio" name="appearance" value ="4" >
-      <input type = "radio" name="appearance" value ="5" >
-    </div>
-  </div>
-          <div class="statWrapper">
-    <p class="label">Perception</p>
-    <div class="buttons">
-      <input type = "radio" name="perception" value ="1" >
-      <input type = "radio" name="perception" value ="2" >
-      <input type = "radio" name="perception" value ="3" >
-      <input type = "radio" name="perception" value ="4" >
-      <input type = "radio" name="perception" value ="5" >
-    </div>
-  </div>
-          <div class="statWrapper">
-    <p class="label">Manipulation</p>
-    <div class="buttons">
-      <input type = "radio" name="manipulation" value ="1" >
-      <input type = "radio" name="manipulation" value ="2" >
-      <input type = "radio" name="manipulation" value ="3" >
-      <input type = "radio" name="manipulation" value ="4" >
-      <input type = "radio" name="manipulation" value ="5" >
-    </div>
-  </div>
-          <div class="statWrapper">
-    <p class="label">Intelligence</p>
-    <div class="buttons">
-      <input type = "radio" name="intelligence" value ="1" >
-      <input type = "radio" name="intelligence" value ="2" >
-      <input type = "radio" name="intelligence" value ="3" >
-      <input type = "radio" name="intelligence" value ="4" >
-      <input type = "radio" name="intelligence" value ="5" >
-    </div>
-  </div>
+          <p class="label">Strength</p>
+          <div class="buttons">
+            <input type="radio" name="strength" value="1" />
+            <input type="radio" name="strength" value="2" />
+            <input type="radio" name="strength" value="3" />
+            <input type="radio" name="strength" value="4" />
+            <input type="radio" name="strength" value="5" />
+          </div>
+        </div>
+        <div class="statWrapper">
+          <p class="label">Dexterity</p>
+          <div class="buttons">
+            <input type="radio" name="dexterity" value="1" />
+            <input type="radio" name="dexterity" value="2" />
+            <input type="radio" name="dexterity" value="3" />
+            <input type="radio" name="dexterity" value="4" />
+            <input type="radio" name="dexterity" value="5" />
+          </div>
+        </div>
+        <div class="statWrapper">
+          <p class="label">Stamina</p>
+          <div class="buttons">
+            <input type="radio" name="stamina" value="1" />
+            <input type="radio" name="stamina" value="2" />
+            <input type="radio" name="stamina" value="3" />
+            <input type="radio" name="stamina" value="4" />
+            <input type="radio" name="stamina" value="5" />
+          </div>
+        </div>
+        <div class="statWrapper">
+          <p class="label">Charisma</p>
+          <div class="buttons">
+            <input type="radio" name="charisma" value="1" />
+            <input type="radio" name="charisma" value="2" />
+            <input type="radio" name="charisma" value="3" />
+            <input type="radio" name="charisma" value="4" />
+            <input type="radio" name="charisma" value="5" />
+          </div>
+        </div>
+        <div class="statWrapper">
+          <p class="label">Wits</p>
+          <div class="buttons">
+            <input type="radio" name="wit" value="1" />
+            <input type="radio" name="wit" value="2" />
+            <input type="radio" name="wit" value="3" />
+            <input type="radio" name="wit" value="4" />
+            <input type="radio" name="wit" value="5" />
+          </div>
+        </div>
+        <div class="statWrapper">
+          <p class="label">Appearance</p>
+          <div class="buttons">
+            <input type="radio" name="appearance" value="1" />
+            <input type="radio" name="appearance" value="2" />
+            <input type="radio" name="appearance" value="3" />
+            <input type="radio" name="appearance" value="4" />
+            <input type="radio" name="appearance" value="5" />
+          </div>
+        </div>
+        <div class="statWrapper">
+          <p class="label">Perception</p>
+          <div class="buttons">
+            <input type="radio" name="perception" value="1" />
+            <input type="radio" name="perception" value="2" />
+            <input type="radio" name="perception" value="3" />
+            <input type="radio" name="perception" value="4" />
+            <input type="radio" name="perception" value="5" />
+          </div>
+        </div>
+        <div class="statWrapper">
+          <p class="label">Manipulation</p>
+          <div class="buttons">
+            <input type="radio" name="manipulation" value="1" />
+            <input type="radio" name="manipulation" value="2" />
+            <input type="radio" name="manipulation" value="3" />
+            <input type="radio" name="manipulation" value="4" />
+            <input type="radio" name="manipulation" value="5" />
+          </div>
+        </div>
+        <div class="statWrapper">
+          <p class="label">Intelligence</p>
+          <div class="buttons">
+            <input type="radio" name="intelligence" value="1" />
+            <input type="radio" name="intelligence" value="2" />
+            <input type="radio" name="intelligence" value="3" />
+            <input type="radio" name="intelligence" value="4" />
+            <input type="radio" name="intelligence" value="5" />
+          </div>
+        </div>
+      </div>
 
-</div>
-
-<input type="submit" value="Submit">
-</form>
-
-</body>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
 </html>
