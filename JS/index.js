@@ -29,11 +29,11 @@ window.onload = function () {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const character = form.elements['character'].value
+    const cname = form.elements['cname'].value
     const concept = form.elements['concept'].value
-    // const breed = breed.elements['breed'].value
-    // const auspice = auspice.elements['auspice'].value
-    // const tribe = tribe.elements['tribe'].value
+    const bre = form.elements['breed'].value
+    const aus = form.elements['auspice'].value
+    const tri = form.elements['tribe'].value
 
     const str = form.elements['strength'].value // Eh?  EEEh?  Pretty slick!
     const cha = form.elements['charisma'].value
@@ -48,11 +48,12 @@ window.onload = function () {
     fetch('http://localhost:3000/characters/ ', {
       method: 'POST',
       body: JSON.stringify({
-        character: character,
+        // user_id: user_id,
+        cname: cname,
         concept: concept,
-        breed: breed,
-        auspice: auspice,
-        tribe: tribe,
+        breed: bre,
+        auspice: aus,
+        tribe: tri,
         strength: str,
         dexterity: dex,
         charisma: cha,
