@@ -26,13 +26,13 @@
   color: white;
 }
 
-.label {
+/* .label {
   font-family: "Fira Sans", sans-serif;
   align-items: center;
   display: flex;
   justify-content: space-between;
   width: 100px
-}
+} */
 
 .statWrapper {
   display: flex;
@@ -47,3 +47,24 @@
   width: 100px;
 }
 
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  
+  /* width: 100px; */
+  /* margin: 10px; */
+  /* text-align: center; */
+  /* line-height: 75px; */
+  /* font-size: 30px; */
+}
+
+.main-wrapper {
+  display: flex;
+  width: 100%;
+}
