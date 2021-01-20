@@ -11,63 +11,43 @@
     <script src="js/index.js"></script>
 
     <div class="topnav">
-      <a class="active" href="#home">Werewolf</a>
-      <a href="#">Fera</a>
-      <a href="#">Fae</a>
-      <a href="#">Vampire</a>
+      <a class="active" href="#home">Werewolf Maker</a>
     </div>
-
+<!-- TOP NAV ABOVE -->
+<div class="total-wrap">
+  <div class="top-three">
     <form id="sheet" method="POST">
       <div>
         <label for="cname">Character Name: </label>
-        <input type="text" id="cname" name="cname" />
+        <input type="text" id="cname" name="cname" size="10" />
       </div>
 
       <div>
         <label for="concept">Concept: </label>
-        <input type="text" id="concept" name="concept" />
+        <input type="text" id="concept" name="concept" size="10" />
       </div>
 
       <div>
         <label for="breed">Werewolf Breed:</label>
-        <!-- <input type="text" id="breed" name="breed" /> -->
         <select id="breed" name="breed">
           <option value="Homid">Homid</option>
           <option value="Lupus">Lupus</option>
         </select>
-        <!--
-<input list="breed-flavors" id="breed-choice" name="breed-choice" />
-<datalist id="breed-flavors">
-    <option value="Homid">
-    <option value="Lupus">
-    <option value="">
-    <option value="">
-    <option value="">
-</datalist> -->
       </div>
+    </div>
 
+    <div class="bottom-two">
       <div>
         <label for="auspice">Choose an Auspice:</label>
-        <!-- <input type="text" id="auspice" name="auspice" /> -->
         <select id="auspice" name="auspice">
           <option value="Full">Full</option>
           <option value="Half">Half</option>
           <option value="No Moon">No Moon</option>
         </select>
-
-        <!-- <input list="auspice-flavors" id="auspice-choice" name="auspice-choice" />
-<datalist id="auspice-flavors">
-    <option value="Full">
-    <option value="Half">
-    <option value="No Moon">
-    <option value="">
-    <option value="">
-</datalist> -->
       </div>
 
       <div>
         <label for="tribe">Choose an Tribe:</label>
-        <!-- <input type="text" id="tribe" name="tribe" /> -->
         <select id="tribe" name="tribe">
           <option value="Tribe A">Tribe A</option>
           <option value="Tribe B">Tribe B</option>
@@ -76,7 +56,9 @@
           <option value="Tribe E">Tribe E</option>
         </select>
       </div>
-
+      </div>
+      </div>
+      <!-- LOWER STATS BELOW HERE -->
       <div class="main-wrapper">
         <div class="flex-container">
           <div class="statWrapper">
