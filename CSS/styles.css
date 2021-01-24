@@ -76,6 +76,5 @@ input, select {
 .bottom-two {
   display: flex;
   flex-direction: column;
-  width: max-content;
   width:50%;
 }
