@@ -1,10 +1,3 @@
-// fetch('http://localhost:3000/users/') 
-//  .then((response) => {
-//     return response.json();
-//   })
-//   .then((data) => {
-//     console.log(data);
-//   })
 const fillStat = (name) => {
   console.log(name)
   const stats = document.getElementsByName(name);
@@ -13,7 +6,6 @@ const fillStat = (name) => {
   const selected = [...stats].filter(stat => stat.checked);
 
   // Then we need to select every input before it. 
-  // Effing VS Code wants to append Actually to everytthing.
   stats.forEach(stat => {
     if (parseInt(stat.value) <= parseInt(selected[0].value)) {
       stat.checked = true;
@@ -35,7 +27,7 @@ window.onload = function () {
     const aus = form.elements['auspice'].value
     const tri = form.elements['tribe'].value
 
-    const str = form.elements['strength'].value // Eh?  EEEh?  Pretty slick!
+    const str = form.elements['strength'].value
     const cha = form.elements['charisma'].value
     const per = form.elements['perception'].value
     const dex = form.elements['dexterity'].value
